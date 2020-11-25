@@ -23,5 +23,14 @@ namespace Neag_Cristina_Lab8.Models
         public int PublisherID { get; set; }
         public Publisher Publisher { get; set; }
         public ICollection<BookCategory> BookCategories { get; set; }
+
+        [Display(Name = "Book Title and Author Name")]
+        public string FullDetails
+        {
+            get
+            {
+                return Title + " by " + Author;
+            }
+        }
     }
 }
